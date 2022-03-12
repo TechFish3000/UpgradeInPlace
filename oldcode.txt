@@ -1,0 +1,39 @@
+-- 	if player.get_quick_bar_slot(1 + working_hotbar) == player.cursor_stack.prototype and not right_left then
+	-- 		do end
+
+	-- 	elseif player.get_quick_bar_slot(10 + working_hotbar) == player.cursor_stack.prototype and right_left then
+	-- 		do end
+
+	-- 	else
+	-- 		local fin_slot = nil
+			
+	-- 		for slot=2,10 do
+	-- 			if (player.get_quick_bar_slot(slot + working_hotbar) == nil and fin_slot == nil) or (player.get_quick_bar_slot(slot + working_hotbar) == player.cursor_stack.prototype and fin_slot == nil) then
+	-- 				if not right_left then
+	-- 					fin_slot = 10 - slot
+	-- 				else
+	-- 					fin_slot = slot
+	-- 				end
+	-- 			end
+	-- 		end
+
+	-- 		if fin_slot == nil and not right_left then 
+	-- 			fin_slot = 0
+	-- 		elseif fin_slot == nil and right_left then
+	-- 			fin_slot = 10
+	-- 		end
+
+    --         local lr = nil
+	-- 		local rl = nil
+	-- 		local fin = nil 
+
+	-- 		for num=fin_slot,8 do
+	-- 			if not right_left then
+	-- 				--do
+	-- 			else
+	-- 				-- do other way
+	-- 		end
+
+	-- 		player.set_quick_bar_slot((10 - num) + working_hotbar, player.get_quick_bar_slot((9 - num) + working_hotbar))
+	-- 	end
+	-- 	player.set_quick_bar_slot(1 + working_hotbar, player.cursor_stack.name)

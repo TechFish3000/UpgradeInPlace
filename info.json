@@ -1,0 +1,9 @@
+{
+    "name": "UpgradeInPlace",
+    "version": "0.0.1",
+    "title": "Upgrade In Place",
+    "author": "TechFish3000",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1", "?aai-industry >= 0.5.0"],
+    "description": "Press U to upgrade buildings in place, can be filtered with an upgrade planner."
+  }

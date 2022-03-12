@@ -1,0 +1,4 @@
+require("prototypes/keybinds")
+
+
+-- idk
