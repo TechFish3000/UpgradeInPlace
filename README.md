@@ -2,7 +2,7 @@
 
 another factorio mod
 
-Press (U) or whatevery you rebind it to while hovering over a building to attempt upgrading it.
+Press (U) or whatever you rebind it to while hovering over a building to attempt upgrading it.
 
 If you have the next building in your inventory, it will replace instantly and if not it will begin crafting if materials are present while marking it with an icon.
 
