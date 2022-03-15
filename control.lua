@@ -32,6 +32,17 @@ end
 -- Mod functions
 -- 
 
+
+function iscraftable(playerindex, recipename)
+	for key, recipe in game.players[playerindex].force.recipes do
+		if recipe.name == recipename then
+			return true
+		end
+	end
+	return false
+	
+end
+
 -- when an entity is mined
 function entitymined(event)
 	-- assign the player index
@@ -91,7 +102,7 @@ function checkcraftingqueueempty(event)
 			-- otherwise
 			else
 				-- if the player is not crafting anything and has the items needed to craft the next upgrade item
-				if (player.crafting_queue_size == 0 and player.get_craftable_count(entspritetable[1].prototype.next_upgrade.items_to_place_this[1].name) > 0) then
+				if (player.crafting_queue_size == 0 and player.get_craftable_count(entspritetable[1].prototype.next_upgrade.items_to_place_this[1].name) > 0 and iscraftable(playerIndex, entspritetable[1].prototype.next_upgrade.items_to_place_this.name)) then
 					-- begin crafting the item
 					player.begin_crafting{ count = 1 , recipe = entspritetable[1].prototype.next_upgrade.items_to_place_this[1].name}
 				end
@@ -99,6 +110,7 @@ function checkcraftingqueueempty(event)
 		end
 	end
 end
+
 
 
 
@@ -289,7 +301,7 @@ function playerTriedUpgrading(event)
 
 					
 					-- if the materials to craft it are present
-					if (game.players[playInd].get_craftable_count(up.items_to_place_this[1].name) > 0) then
+					if (game.players[playInd].get_craftable_count(up.items_to_place_this[1].name) > 0 and iscraftable(playInd, up.items_to_place_this.name) ) then
 						-- begin crafting
 						game.players[playInd].begin_crafting{count = 1, recipe = up.items_to_place_this[1].name}
 						-- create an upgrade sprite attached
